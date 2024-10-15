@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\pavel\\RiderProjects\\Lab.Net\\Chat\\Chat.csproj",
-        "projectName": "Chat",
+        "projectName": "Chat.Service",
         "projectPath": "C:\\Users\\pavel\\RiderProjects\\Lab.Net\\Chat\\Chat.csproj",
         "packagesPath": "C:\\Users\\pavel\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\pavel\\RiderProjects\\Lab.Net\\Chat\\obj\\",

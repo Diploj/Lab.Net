@@ -5,11 +5,15 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <InvariantGlobalization>true</InvariantGlobalization>
+        <AssemblyName>Chat.Service</AssemblyName>
+        <RootNamespace>Chat.Service</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.1"/>
-        <PackageReference Include="Serilog" Version="4.1.0-dev-02238" />
+        <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+        <PackageReference Include="Serilog.Enrichers.CorrelationId" Version="3.0.1" />
+        <PackageReference Include="Serilog.Exceptions" Version="8.4.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
         <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.9.0" />
     </ItemGroup>
