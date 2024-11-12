@@ -1,5 +1,5 @@
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Chat.DataAccess.Entities;
 
@@ -7,9 +7,6 @@ namespace Chat.DataAccess.Entities;
 public class MessageEntity : BaseEntity
 {
     public string Text { get; set; }
-    public DateTime SendDate { get; set; }
-    public Object? Attachment { get; set; }
-    
     public int UserId { get; set; }
     public UserEntity User { get; set; }
 }

@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.Service", "Chat.Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.DataAccess", "Chat.DataAccess\Chat.DataAccess.csproj", "{0285D408-057A-4DE2-838D-DE790FED83D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.Repository", "Chat.Repository\Chat.Repository.csproj", "{16ECC6D9-85AF-4FB5-8EDB-53EE765E2515}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.BL", "Chat.BL\Chat.BL.csproj", "{06C20821-D9D7-44FD-94CD-6409D19F2FF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,9 +20,9 @@ Global
 		{0285D408-057A-4DE2-838D-DE790FED83D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0285D408-057A-4DE2-838D-DE790FED83D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0285D408-057A-4DE2-838D-DE790FED83D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{16ECC6D9-85AF-4FB5-8EDB-53EE765E2515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{16ECC6D9-85AF-4FB5-8EDB-53EE765E2515}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{16ECC6D9-85AF-4FB5-8EDB-53EE765E2515}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{16ECC6D9-85AF-4FB5-8EDB-53EE765E2515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06C20821-D9D7-44FD-94CD-6409D19F2FF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06C20821-D9D7-44FD-94CD-6409D19F2FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06C20821-D9D7-44FD-94CD-6409D19F2FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06C20821-D9D7-44FD-94CD-6409D19F2FF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

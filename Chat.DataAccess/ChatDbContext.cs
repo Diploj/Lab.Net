@@ -12,6 +12,7 @@ public class ChatDbContext : DbContext
 
     public ChatDbContext(DbContextOptions options) : base(options)
     {
+        
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
