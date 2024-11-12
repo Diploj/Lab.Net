@@ -1,8 +1,9 @@
 using System.Linq.Expressions;
+using Chat.DataAccess;
 using Chat.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Chat.DataAccess;
+namespace Chat.Repository;
 
 public class Repository<T> : IRepository<T> where T : class, IBaseEntity
 {

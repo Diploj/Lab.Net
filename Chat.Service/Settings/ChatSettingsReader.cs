@@ -6,7 +6,7 @@ public class ChatSettingsReader
     {
         return new ChatSettings()
         {
-             ChatDbContextConnectionString = configuration.GetValue<string>("FitnessClubDbContext")
+             ChatDbContextConnectionString = configuration.GetValue<string>("ChatDbContext")
         };
     }
 }

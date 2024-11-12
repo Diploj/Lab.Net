@@ -1,6 +1,7 @@
 using System.Linq.Expressions;
 using Chat.DataAccess.Entities;
-namespace Chat.DataAccess;
+
+namespace Chat.Repository;
 
 public interface IRepository<T> where T: class, IBaseEntity
 {

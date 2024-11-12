@@ -9,7 +9,7 @@ public class DbContextConfigurator
     public static void ConfigureService(IServiceCollection services, ChatSettings settings)
     {
         services.AddDbContextFactory<ChatDbContext>(
-            options => { options.UseSqlServer(settings.FitnessClubDbContextConnectionString); },
+            options => { options.UseNpgsql(settings.ChatDbContextConnectionString); },
             ServiceLifetime.Scoped);
     }
 
