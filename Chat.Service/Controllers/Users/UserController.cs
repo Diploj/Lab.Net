@@ -109,7 +109,7 @@ public class UserController : ControllerBase
         catch (Exception e)
         {
             _logger.LogError(e.ToString());
-            return BadRequest("ERROR");
+            return BadRequest("ERROR"); 
         }
     }
     
