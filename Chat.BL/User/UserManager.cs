@@ -39,9 +39,13 @@ public class UserManager : IUserManager
         }
     }
 
-    public UserModel UpdateUser(UpdateUserModel model)
+    public UserModel UpdateUser(int id, UpdateUserModel model)
     {
-        var entity = _mapper.Map<UserEntity>(model);
+        var entity = _userRepository.GetById(id);
+        if (entity == null)
+            throw new KeyNotFoundException();
+        
+        entity = _mapper.Map<UserEntity>(model);
         entity = _userRepository.Save(entity);
         return _mapper.Map<UserModel>(entity);
     }

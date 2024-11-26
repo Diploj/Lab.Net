@@ -3,7 +3,7 @@ using Chat.BL.Message.Entities;
 using Chat.DataAccess.Entities;
 using Chat.Repository;
 
-namespace Chat.BL.User;
+namespace Chat.BL.Message;
 
 public class MessageProvider: IMessageProvider
 {
@@ -16,7 +16,7 @@ public class MessageProvider: IMessageProvider
         _mapper = mapper;
     }
 
-    public IEnumerable<MessageModel> GetUsers(FilterMessageModel? filter = null)
+    public IEnumerable<MessageModel> GetMessages(FilterMessageModel? filter = null)
     {
         var users = _messageRepository.GetAll(user => 
             filter == null ||
@@ -27,7 +27,7 @@ public class MessageProvider: IMessageProvider
         return _mapper.Map<IEnumerable<MessageModel>>(users);
     }
 
-    public MessageModel GetUserInfo(int id)
+    public MessageModel GetMessageInfo(int id)
     {
         var entity = _messageRepository.GetById(id);
         if (entity == null)

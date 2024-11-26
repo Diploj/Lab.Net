@@ -15,7 +15,7 @@ public class UpdateUserRequestValidator : AbstractValidator<UpdateUserRequest>
             .NotEmpty()
             .Matches("[+]7[0-9]{10}")
             .WithMessage("Phone number is required");
-        RuleFor(x => x.Login)
+        RuleFor(request => request.Login)
             .NotEmpty()
             .MinimumLength(3)
             .MaximumLength(30)

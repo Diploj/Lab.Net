@@ -3,7 +3,7 @@ using Chat.BL.Message.Entities;
 using Chat.DataAccess.Entities;
 using Chat.Repository;
 
-namespace Chat.BL.User;
+namespace Chat.BL.Message;
 
 public class MessageManager : IMessageManager
 {
@@ -16,7 +16,7 @@ public class MessageManager : IMessageManager
         _mapper = mapper;
     }
     
-    public MessageModel CreateUser(CreateMessageModel model)
+    public MessageModel CreateMessage(CreateMessageModel model)
     {
         var entity = _mapper.Map<MessageEntity>(model);
 
@@ -25,7 +25,7 @@ public class MessageManager : IMessageManager
         return _mapper.Map<MessageModel>(entity);
     }
 
-    public void DeleteUser(int id)
+    public void DeleteMessage(int id)
     {
         try
         {
@@ -38,9 +38,13 @@ public class MessageManager : IMessageManager
         }
     }
 
-    public MessageModel UpdateUser(UpdateMessageModel model)
+    public MessageModel UpdateMessage(int id, UpdateMessageModel model)
     {
-        var entity = _mapper.Map<MessageEntity>(model);
+        var entity = _messageRepository.GetById(id);
+        if (entity == null)
+            throw new KeyNotFoundException();
+        
+        entity = _mapper.Map<MessageEntity>(model);
         entity = _messageRepository.Save(entity);
         return _mapper.Map<MessageModel>(entity);
     }

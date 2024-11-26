@@ -20,7 +20,7 @@ public class UserBlProfile : Profile
 
         CreateMap<UpdateUserModel, UserEntity>()
             .ForMember(dest => dest.Id, opt => opt.Ignore())
-            .ForMember(dest => dest.ExternalId, opt => opt.MapFrom(src => src.Id))
+            .ForMember(dest => dest.ExternalId, opt => opt.Ignore())
             .ForMember(dest => dest.ModificationTime, opt => opt.Ignore())
             .ForMember(dest => dest.Role, opt => opt.MapFrom(src => src.IsAdmin ? Role.Admin : Role.User));
     }

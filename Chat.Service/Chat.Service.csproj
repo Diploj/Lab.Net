@@ -31,8 +31,4 @@
       <Compile Remove="IoC\MapperConfigurator.cs" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Controllers\Messages\Entities\" />
-    </ItemGroup>
-
 </Project>

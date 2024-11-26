@@ -18,7 +18,7 @@ public class MessageBlProfile : Profile
             .ForMember(dest => dest.CreationTime, opt => opt.Ignore());
 
         CreateMap<UpdateMessageModel, MessageEntity>()
-            .ForMember(dest => dest.ExternalId, opt => opt.MapFrom(src => src.Id))
+            .ForMember(dest => dest.ExternalId, opt => opt.Ignore())
             .ForMember(dest => dest.Id, opt => opt.Ignore())
             .ForMember(dest => dest.ModificationTime, opt => opt.Ignore());
     }

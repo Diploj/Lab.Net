@@ -1,10 +1,10 @@
 using Chat.BL.Message.Entities;
 
-namespace Chat.BL.User;
+namespace Chat.BL.Message;
 
 public interface IMessageManager
 {
-    MessageModel CreateUser(CreateMessageModel model);
-    void DeleteUser(int id);
-    MessageModel UpdateUser(UpdateMessageModel model);
+    MessageModel CreateMessage(CreateMessageModel model);
+    void DeleteMessage(int id);
+    MessageModel UpdateMessage(int id, UpdateMessageModel model);
 }

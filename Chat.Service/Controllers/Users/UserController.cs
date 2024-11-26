@@ -16,7 +16,7 @@ public class UserController : ControllerBase
     private readonly IUserManager _userManager;
     private readonly IUserProvider _userProvider;
 
-    public UserController(IMapper mapper, ILogger<UserController> logger, IUserManager userManager,
+    public UserController(IMapper mapper, ILogger logger, IUserManager userManager,
         IUserProvider userProvider)
     {
         _mapper = mapper;
@@ -59,7 +59,7 @@ public class UserController : ControllerBase
             var updateUserModel = _mapper.Map<UpdateUserModel>(request);
             try
             {
-                var userModel = _userManager.UpdateUser(updateUserModel);
+                var userModel = _userManager.UpdateUser(request.Id,updateUserModel);
                 return Ok(new UserListResponse
                 {
                     Users = [userModel]
